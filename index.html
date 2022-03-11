@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Multi-Step Form</title>
+</head>
+<body>
+    <div class="container-xxl mt-2">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-12">
+                <form id="regForm">
+                    <div class="all-steps d-flex justify-content-between" id="all-steps">
+                        <span class="step active">Personal Info</span>
+                        <span class="step">Educational Info</span>
+                        <span class="step">Course Choice</span>
+                        <span class="step">Guardian Info</span>
+                        <span class="step">Sponsorship</span>
+                        <span class="step">Awards</span>
+                        <span class="step">References</span>
+                        <span class="step">Declaration & Signature</span>
+                        <span class="step">Payment</span>
+                    </div>
+
+                    <!------   PERSONAL INFO TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold ">Applicant Information</h1>
+                        <hr>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="firstName" class="qc-label">
+                                    First Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="firstName" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="lastName" class="qc-label">
+                                    Last Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="lastName" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="mobileNumber" class="qc-label">
+                                    Mobile Number<span class="text-danger">*</span>
+                                </label>
+                                <input type="number" id="mobileNumber" class="qc-input">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <div>
+                                <label for="dob" class="qc-label">
+                                    Date of Birth<span class="text-danger">*</span>
+                                </label>
+                                <input type="date" id="dob" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="placeOfBirth" class="qc-label">
+                                    Place of Birth<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="placeOfBirth" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="nationality" class="qc-label">
+                                    Nationality<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="nationality" class="qc-input">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <div>
+                                <label for="email" class="qc-label">
+                                    Email<span class="text-danger">*</span>
+                                </label>
+                                <input type="email" id="email" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="gender" class="qc-label me-4">
+                                    Gender<span class="text-danger">*</span>
+                                </label>
+                                <div class="d-flex gap-3 justify-content-start  align-items-center">
+                                    <input class="qc-input" type="radio" name="gender" id="male" checked>
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <input class="qc-input" type="radio" name="gender" id="female">
+                                    <label for="female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="text-start fs-6 text-uppercase fw-bolder mt-4">Permanent Address<span class="text-danger">*</span></h2>
+                        <hr>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="province" class="qc-label">
+                                    Province
+                                </label>
+                                <input type="text" id="province" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="city" class="qc-label">
+                                    City
+                                </label>
+                                <input type="text" id="city" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="address" class="qc-label">
+                                    Address
+                                </label>
+                                <input type="text" id="address" class="qc-input">
+                            </div>
+                        </div>
+
+                        <h2 class="text-start fs-6 text-uppercase fw-bolder mt-4">Local Address<span class="text-danger">*</span></h2>
+                        <hr>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="province" class="qc-label">
+                                    Province
+                                </label>
+                                <input type="text" id="province" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="city" class="qc-label">
+                                    City
+                                </label>
+                                <input type="text" id="city" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="address" class="qc-label">
+                                    Address
+                                </label>
+                                <input type="text" id="address" class="qc-input">
+                            </div>
+                        </div>
+                    </div>
+                    <!------   PERSONAL INFO TAB END  ------>
+
+                    <!------   EDUCATIONAL INFO TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold ">educational background</h1>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Level</th>
+                                    <th scope="col">College/Institution	</th>
+                                    <th scope="col">Board/University</th>
+                                    <th scope="col">Completion Year</th>
+                                    <th scope="col">Major Subjects</th>
+                                    <th scope="col">Grade/GPA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">SEE or Equivalent *</th>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10 + 2 or Equivalent *	</th>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Bachelor or Equivalent</th>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="qc-input">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-5">
+                            <p>Have you been awarded any scholarship ?</p>
+                            <input type="radio" id="yes" name="scholarship" value="YES" class="qc-input">
+                            <label for="yes" class="qc-label">YES</label><br>
+                            <input type="radio" id="no" name="scholarship" value="NO" class="qc-input">
+                            <label for="no" class="qc-label">NO</label><br>
+                        </div>
+                        <div class="d-flex flex-column mt-5">
+                            <label class="qc-label">If yes, please give details of the scholarship (including the basic the amounts of the scholarship awarded)</label>
+                            <textarea name="message" id="msg" cols="30" rows="10" class="qc-input"></textarea>
+                        </div>
+                    </div>
+                    <!------   EDUCATIONAL INFO TAB END  ------>
+
+                    <!------   COURSE CHOICE TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold ">course choice</h1>
+                        <hr>
+                        <div class="d-flex">
+                            <!-- Masters -->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Masters</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="me" name="masters" value="ME" class="qc-input">
+                                            <label for="me" class="qc-label">ME Computer</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="mcis" name="masters" value="MCIS" class="qc-input">
+                                            <label for="mcis" class="qc-label">MCIS</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="msc" name="masters" value="MSC" class="qc-input">
+                                            <label for="msc" class="qc-label">MSc Computer</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="evening" name="time-master" value="evening" class="qc-input">
+                                            <label for="evening" class="qc-label">Evening</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Bachelors -->
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Bachelor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="besw" name="bachelor" value="besw" class="qc-input">
+                                            <label for="besw" class="qc-label">BE Software</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="becivil" name="bachelor" value="becivil" class="qc-input">
+                                            <label for="becivil" class="qc-label">BE Civil</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="becomp" name="bachelor" value="becomp" class="qc-input">
+                                            <label for="becomp" class="qc-label">BE Computer</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="beit" name="bachelor" value="beit" class="qc-input">
+                                            <label for="beit" class="qc-label">BE IT</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="beelec" name="bachelor" value="beelec" class="qc-input">
+                                            <label for="beelec" class="qc-label">BE Electronics and Communication</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="bca" name="bachelor" value="bca" class="qc-input">
+                                            <label for="bca" class="qc-label">BCA</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="bba" name="bachelor" value="bba" class="qc-input">
+                                            <label for="bba" class="qc-label">BBA</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" id="morning" name="time-bachelor" value="morning" class="qc-input">
+                                            <label for="morning" class="qc-label">Morning</label>
+                                            <input type="radio" id="day" name="time-bachelor" value="day" class="qc-input">
+                                            <label for="day" class="qc-label">Day</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3>Alternative Choice</h3>
+                        <p>In case you are interested in another programme in addition to your first choice, please menttion it</p>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="second-choice" class="qc-label">
+                                    Second Choice<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="second-choice" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="third-choice" class="qc-label">
+                                Third Choice<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="third-choice" class="qc-input">
+                            </div>
+                        </div>
+                    </div>
+                    <!------   COURSE CHOICE TAB END  ------>
+
+                    <!------   GUARDIAN INFO TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold ">
+                            parent and guardian information
+                        </h1>
+                        <hr>
+
+                        <!-- Father -->
+                        <h5>Father <span class="text-danger">*</span></h5>
+                        <hr>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="firstName" class="qc-label">
+                                    First Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="firstName" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="lastName" class="qc-label">
+                                    Last Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="lastName" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="mobileNumber" class="qc-label">
+                                    Mobile Number<span class="text-danger">*</span>
+                                </label>
+                                <input type="number" id="mobileNumber" class="qc-input">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <div>
+                                <label for="province" class="qc-label">
+                                    Province
+                                </label>
+                                <input type="text" id="province" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="city" class="qc-label">
+                                    City
+                                </label>
+                                <input type="text" id="city" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="address" class="qc-label">
+                                    Address
+                                </label>
+                                <input type="text" id="address" class="qc-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="qc-label">
+                                Email
+                            </label>
+                            <input type="email" id="email" class="qc-input">
+                        </div> 
+
+                        <!-- Mother -->
+                        <h5 class="mt-4">Mother <span class="text-danger">*</span></h5>
+                        <hr>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="firstName" class="qc-label">
+                                    First Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="firstName" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="lastName" class="qc-label">
+                                    Last Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="lastName" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="mobileNumber" class="qc-label">
+                                    Mobile Number<span class="text-danger">*</span>
+                                </label>
+                                <input type="number" id="mobileNumber" class="qc-input">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <div>
+                                <label for="province" class="qc-label">
+                                    Province
+                                </label>
+                                <input type="text" id="province" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="city" class="qc-label">
+                                    City
+                                </label>
+                                <input type="text" id="city" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="address" class="qc-label">
+                                    Address
+                                </label>
+                                <input type="text" id="address" class="qc-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="qc-label">
+                                Email
+                            </label>
+                            <input type="email" id="email" class="qc-input">
+                        </div> 
+
+                        <!-- Local Guardian -->
+                        <h5 class="mt-4">Local Guardian <span class="text-danger">*</span></h5>
+                        <hr>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="firstName" class="qc-label">
+                                    First Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="firstName" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="lastName" class="qc-label">
+                                    Last Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="lastName" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="mobileNumber" class="qc-label">
+                                    Mobile Number<span class="text-danger">*</span>
+                                </label>
+                                <input type="number" id="mobileNumber" class="qc-input">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <div>
+                                <label for="province" class="qc-label">
+                                    Province
+                                </label>
+                                <input type="text" id="province" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="city" class="qc-label">
+                                    City
+                                </label>
+                                <input type="text" id="city" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="address" class="qc-label">
+                                    Address
+                                </label>
+                                <input type="text" id="address" class="qc-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="qc-label">
+                                Email
+                            </label>
+                            <input type="email" id="email" class="qc-input">
+                        </div> 
+                        <h1 class="text-start fs-4 text-uppercase fw-bold mt-4">
+                            Financing your education
+                        </h1>
+                        <hr>
+                        <input type="radio" id="parents" name="finance" value="parents" class="qc-input">
+                        <label for="parents" class="qc-label">Parents</label>
+                        <input type="radio" id="you" name="finance" value="you" class="qc-input ms-2">
+                        <label for="you" class="qc-label">You</label>
+                        <input type="radio" id="others" name="finance" value="others" class="qc-input ms-2">
+                        <label for="others" class="qc-label">Others</label>
+                    </div>
+                    <!------   GUARDIAN INFO TAB END  ------>
+
+                    <!------   SPONSORSHIP TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold mt-2 ">
+                            Sponsorship
+                        </h1>
+                        <hr>
+                        <p>Please fill out this section, only if you are being sponsored</p>
+                        <h5>Type of Sponsorship</h5>
+                        <input type="radio" id="partial" name="finance" value="partial" class="qc-input">
+                        <label for="partial" class="qc-label">Partial</label>
+                        <input type="radio" id="full" name="finance" value="full" class="qc-input ms-2">
+                        <label for="full" class="qc-label">Full</label>
+
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="organization" class="qc-label">
+                                    Organization
+                                </label>
+                                <input type="text" id="organization" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="authority" class="qc-label">
+                                    Authority
+                                </label>
+                                <input type="text" id="authority" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="contactPerson" class="qc-label">
+                                    Contact Person
+                                </label>
+                                <input type="text" id="contactPerson" class="qc-input">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="telephone" class="qc-label">
+                                    Telephone
+                                </label>
+                                <input type="number" id="telephone" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="contactAddress" class="qc-label">
+                                    Contact Address
+                                </label>
+                                <input type="text" id="contactAddress" class="qc-input">
+                            </div>
+                        </div>
+                    </div>
+                    <!------   SPONSORSHIP TAB END  ------>
+
+                    <!------   AWARDS TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold mt-2 ">
+                            awards & ecas
+                        </h1>
+                        <hr>
+                        <div class="mb-4">
+                            <h5>1. Rewards and certificate</h5>
+                            <p>Please list all the rewards and certificates received.</p>
+                            <textarea id="rewardsCerts" cols="150" rows="10"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <h5>2. Mention clubs, organization, sports and/or extra curricular activities in which you have been involved.</h5>
+                            <p>Please indicate how long you have been involved in each and describe your participation</p>
+                            <textarea id="rewardsCerts" cols="150" rows="10"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <div>
+                                <h5>3. Have you ever volunteered for an organization or done community service?</h5>
+                                <input type="radio" id="yes" name="time-bachelor" value="yes" class="qc-input">
+                                <label for="yes" class="qc-label">Yes</label>
+                                <input type="radio" id="no" name="time-bachelor" value="no" class="qc-input">
+                                <label for="no" class="qc-label">No</label>
+                            </div>
+                            <textarea cols="150" rows="10"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <h5>4. What are your future plans-college/university plans and career goals?</h5>
+                            <textarea id="rewardsCerts" cols="150" rows="10"></textarea>
+                        </div>
+                        <h1 class="text-start fs-4 text-uppercase fw-bold mt-2 ">
+                            additional information
+                        </h1>
+                        <hr>
+                        <div class="mb-4">
+                            <div>
+                                <h5>1. Has the applicant repeated any class or grade/level?</h5>
+                                <input type="radio" id="yes" name="time-bachelor" value="yes" class="qc-input">
+                                <label for="yes" class="qc-label">Yes</label>
+                                <input type="radio" id="no" name="time-bachelor" value="no" class="qc-input">
+                                <label for="no" class="qc-label">No</label>
+                            </div>
+                            <p>If yes, please specify class or grade/level(s) and reason(s) for repeating:</p>
+                            <textarea cols="150" rows="10"></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <div>
+                                <h5>2. Has the applicant ever been suspended or dismissed from school for any reason?</h5>
+                                <input type="radio" id="yes" name="time-bachelor" value="yes" class="qc-input">
+                                <label for="yes" class="qc-label">Yes</label>
+                                <input type="radio" id="no" name="time-bachelor" value="no" class="qc-input">
+                                <label for="no" class="qc-label">No</label>
+                            </div>
+                            <p>If yes, please provide specific details:</p>
+                            <textarea cols="150" rows="10"></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <div>
+                                <h5>3. Does the applicant have any mental, physical health condition or disability about which the College should be aware?</h5>
+                                <input type="radio" id="yes" name="time-bachelor" value="yes" class="qc-input">
+                                <label for="yes" class="qc-label">Yes</label>
+                                <input type="radio" id="no" name="time-bachelor" value="no" class="qc-input">
+                                <label for="no" class="qc-label">No</label>
+                            </div>
+                            <p>If yes, please provide specific details:</p>
+                            <textarea cols="150" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <!------   AWARDS TAB END  ------>
+
+                    <!------   REFERENCES TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold ">references</h1>
+                        <hr>
+                        <h5 class="mt-4">First Reference</h5>
+
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="name" class="qc-label">
+                                    Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="name" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="occupation" class="qc-label">
+                                    Occupation/Designation<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="occupation" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="organization" class="qc-label">
+                                    Organization<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="organization" class="qc-input">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="Contact Person" class="qc-label">
+                                    Contact Person<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="Contact Person" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="telephone" class="qc-label">
+                                    Telephone<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="telephone" class="qc-input">
+                            </div>
+                        </div>
+
+                        <h5 class="mt-4">Second Reference</h5>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="name" class="qc-label">
+                                    Name<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="name" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="occupation" class="qc-label">
+                                    Occupation/Designation<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="occupation" class="qc-input">
+                            </div>
+                            <div>
+                                <label for="organization" class="qc-label">
+                                    Organization<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="organization" class="qc-input">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <label for="Contact Person" class="qc-label">
+                                    Contact Person<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="Contact Person" class="qc-input w-full">
+                            </div>
+                            <div>
+                                <label for="telephone" class="qc-label">
+                                    Telephone<span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="telephone" class="qc-input">
+                            </div>
+                        </div>
+                        <h1 class="text-start fs-4 text-uppercase fw-bold ">Miscellaneous</h1>
+                        <hr>
+                        <p>How did you come to know about Nepal College of Information Technology?</p>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <input type="checkbox" id="val1" name="val1" value="ncit">
+                                <label for="val1">NCIT student or college family</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="val2" name="val2" value="website">
+                                <label for="val2">Website</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="val3" name="val3" value="other">
+                            <label for="val3">Other</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="val4" name="val4" value="other">
+                            <label for="val4">Friend/s or acquaintance/s</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="val5" name="val5" value="other">
+                            <label for="val5">Seminar</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="val6" name="val6" value="other">
+                            <label for="val6">Relatives</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="val7" name="val7" value="other">
+                            <label for="val7">Newspaper</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!------   REFERENCES TAB END  ------>
+
+                    <!------   DECLARATION & SIGNATURE TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold ">declaration and signature</h1>
+                        <hr>
+                        <p>I,   <input type="text" name="name" id="name" placeholder="Write Name"> to be considered for admission to Nepal College of Information Technology -NCIT.</p>
+                        <ol>
+                            <li>
+                                I declare the information supplied in this application and the documentation supporting it is complete.
+                            </li>
+                            <li>
+                                I acknowledge that the provision of false or misleading information may result in the non-acceptance of this application or immediate expulsion from the college after admission.
+                            </li>
+                            <li>
+                                I authorize the college to verify any information provided by me.
+                            </li>
+                            <li>
+                                I authorize the college to obtain, where necessary ,from any other education institution evidence of my academic record or to seek other supporting evidence with respect to my application .
+                            </li>
+                            <li>
+                                I hereby agree to abide by all rules and regulations of NCIT and Pokhara University.
+                            </li>
+                        </ol>
+                        <p>Date: <input type="date" name="date" id="date"> </p>
+                        <h5>Note:</h5>
+                        <p>Please attach the following documents</p>
+                        <div>
+                            <p>* Marks-sheet or progress report of SEE/Equivalent Examinations.</p>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div>
+                            <p>* Documents related to SEE/Equivalent certification--Character Certificate/Migration Certificate.</p>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div>
+                            <p>*Documents related to +2--Character Certificate/Transcript.</p>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div>
+                            <p>* Passport-sized photograph.</p>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div>
+                            <p>* Citizenship.</p>
+                            <input type="file" name="file" id="file">
+                        </div>
+                    </div>
+                    <!------   DECLARATION & SIGNATURE TAB END  ------>
+
+                    <!------   PAYMENT TAB START  ------>
+                    <div class="tab">
+                        <h1 class="text-start fs-4 text-uppercase fw-bold ">payment</h1>
+                        <hr>
+                        <div class="d-flex gap-5">
+                            <div>
+                                <h5>Bank Details</h5>
+                                <p>Account Name: Nepal College of Information Technology</p>
+                                <p>Nabil Bank A/C: 5001017500309</p>
+                                <p>Everest Bank A/C: 02300105200051</p>
+                                <p>Prabhu Bank A/C: 0970068700900011</p>
+                                <p>Email: acncitcollege@gmail.com Ph. No.: 5186354/5186358</p>
+                                <p>NOTE:- Submit Rs 1500 as form charge and submit Bank Voucher in College Account Section</p>
+                            </div>
+                            <div>
+                                <p>Please submit your bank voucher slip *</p>
+                                <input type="file" name="file" id="file">
+                            </div>
+                        </div>
+                    </div>
+                    <!------   PAYMENT TAB END  ------>
+
+                    <div style="overflow:auto;" id="nextprevious">
+                        <div style="float:right;">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                                Previous
+                            </button>
+                            <button type="button" class="my-3" id="nextBtn" onclick="nextPrev(1)">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
